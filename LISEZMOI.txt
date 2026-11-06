@@ -1,0 +1,33 @@
+GESTION GYM – application WPF (.NET Framework 4.8) – ÉTAPE 1
+=============================================================
+Contenu (étapes 1 à 3) : socle (base CSV, clients, packs, achats, présences, planning,
+configuration, tableau de bord, gestion des bases Actuel/Archive, planification de
+l'année suivante, import de configuration).
+Étapes 2 et 3 (charges, URSSAF, CFE, rentabilité, exports Excel/OpenOffice/PDF,
+import xlsx/xlsm/csv) : à venir (menus déjà prévus, grisés).
+
+COMPILER (Windows 10)
+ - Option A : double-clic sur Compiler.bat (nécessite le SDK .NET ou Visual Studio 2019/2022).
+ - Option B : ouvrir GestionGym.csproj dans Visual Studio > Générer > Publier / Générer la solution.
+ L'exe obtenu n'a besoin que de .NET Framework 4.8 (déjà présent sur Windows 10 à jour).
+ Si la compilation affiche des erreurs : copie-les-moi telles quelles, je les corrige.
+
+DOSSIERS (créés à côté de l'exe)
+ Actuel\            bases en cours (un dossier de fichiers CSV par année)
+ Archive\           bases des années précédentes (ouvertes en lecture seule)
+ Export Excel\  Export OpenOffice\  Export PDF\
+ Si le dossier de l'exe n'est pas modifiable (ex. Program Files), les données vont dans
+ %LOCALAPPDATA%\GestionGym.
+
+UTILISATION
+ Ctrl+S enregistrer, Ctrl+N nouvelle base, Ctrl+O ouvrir, F5 actualiser.
+ Fichier > Planifier l'année suivante : crée la base N+1 (config reprise, dates décalées).
+ Sécurités : verrou anti double ouverture, 10 sauvegardes automatiques (_sauvegardes),
+ copie de secours toutes les 90 s, journal erreurs.log.
+
+ÉTAPES 2 ET 3 (nouveautés)
+ - Onglets Charges fixes, URSSAF, CFE, Rentabilité clients, Tracking abonnements, Reporting.
+ - Fichier > Exporter : Excel (.xlsx), OpenOffice (.ods), PDF (A3 ou A4 paysage) avec données, calculs, graphiques, configuration.
+ - Fichier > Importer un fichier : xlsx / xlsm / ods / csv, détection automatique du type de feuille, aperçu, rapport.
+ - Aide d'utilisation intégrée : menu Aide ou touche F1 (rubrique de l'onglet affiché).
+ - Taux URSSAF/CFE/impôt par défaut = valeurs 2026 indicatives : à vérifier dans les onglets concernés.
